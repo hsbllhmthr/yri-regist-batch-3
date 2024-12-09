@@ -1,0 +1,306 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #2d2d2d;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Styling untuk thumbnail container */
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Space between image and form elements */
+}
+
+/* Styling untuk gambar thumbnail */
+.thumbnail-img {
+    width: 960px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Styling untuk form container */
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 1020px;
+    /* Sesuaikan lebar form dengan gambar */
+    max-width: 100%;
+    /* Pastikan form tidak lebih lebar dari gambar */
+}
+
+/* Header styling */
+header h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Gaya input dan tombol */
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-box input[type="file"] {
+    height: 100%;
+}
+
+.input-box input[type="text"],
+.input-box input[type="date"],
+.input-box select {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Styling untuk kotak textarea */
+textarea.form-control {
+    width: 100%;
+    min-height: 120px;
+    /* Tinggi minimum kotak */
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    background-color: #ffffff;
+    color: #495057;
+    outline: none;
+    resize: vertical;
+    /* Membolehkan pengguna mengubah ukuran vertikal */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Styling saat textarea dalam keadaan fokus */
+textarea.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Styling untuk label */
+.form-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* Gaya tombol spesifik untuk div.button */
+.button input[type="button"] {
+    background-color: #0056b3;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 12px;
+        font-size: 16px;
+        font-family: 'Segoe UI', sans-serif;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+        /* Space bawah tombol */
+    /* Memastikan tombol mengikuti w-100 */
+}
+
+/* Hover efek */
+.button input[type="button"]:hover {
+    background-color: #004299;
+}
+
+/* Fokus efek */
+.button input[type="button"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Klik efek */
+.button input[type="button"]:active {
+    transform: scale(0.98);
+    background-color: #004085;
+}
+
+/* Styling dasar untuk label */
+label {
+    font-size: 16px;
+    /* Ukuran font default */
+    font-weight: 600;
+    /* Menebalkan font untuk kejelasan */
+    color: #495057;
+    /* Warna teks */
+    margin-bottom: 8px;
+    /* Jarak di bawah label */
+    display: inline-block;
+    /* Menjamin label muncul dalam satu baris */
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Label di dalam kotak inputan */
+.input-box label {
+    font-size: 14px;
+    /* Ukuran font khusus untuk label dalam form */
+    line-height: 1.5;
+    /* Menyesuaikan tinggi baris */
+}
+
+/* Variasi ukuran untuk perangkat kecil */
+@media (max-width: 768px) {
+    label {
+        font-size: 14px;
+        /* Ukuran font lebih kecil untuk layar kecil */
+    }
+    .thumbnail-img {
+              width: 350px;
+              /* Ukuran gambar lebih kecil pada perangkat mobile */
+              height: auto;
+          }
+}
+
+/* Variasi ukuran untuk perangkat besar */
+@media (min-width: 1024px) {
+    label {
+        font-size: 18px;
+        /* Ukuran font lebih besar untuk layar besar */
+    }
+}
+
+/* Footer Styles */
+.footer {
+    width: 100%;
+    background-color: #f8f9fa;
+    color: #343a40;
+    text-align: center;
+    padding: 20px 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Modal Container Styling */
+.modal-content {
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header Styling */
+.modal-header {
+    border-bottom: none;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.btn-close:hover {
+    opacity: 1;
+}
+
+/* Body Styling */
+.modal-body {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: left;
+    /* Tambahkan properti ini */
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+}
+
+/* Highlight Styling for Dynamic Data */
+#thankYouMessage strong {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Footer Styling */
+.modal-footer {
+    border-top: none;
+    justify-content: center;
+}
+
+.modal-footer .btn {
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Close Button Styling */
+.modal-footer .btn-secondary {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #444;
+}

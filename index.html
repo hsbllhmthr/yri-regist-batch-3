@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Form Pendaftaran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <meta name="keywords" content="Pendaftaran Pengurus YRI Sulsel Batch 3" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="csrf-token" content="UsuSYU6h8xpg83JcviCvZ1Qsa7kLs32ShD0nefKY">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ayo Bergabung! Pendaftaran Pengurus YRI Sulsel Batch 3 Dibuka!" />
+  <meta property="og:site_name" content="Ayo Bergabung! Pendaftaran Pengurus YRI Sulsel Batch 3 Dibuka!" />
+  <meta property="og:image" content="https://i.ibb.co.com/gMXpgy6/image.png" />
+  </head>
+</head>
+
+<body>
+  <div class="form-container">
+    <div class="thumbnail-container">
+      <img src="/thumb-form.jpg" alt="Thumbnail" class="thumbnail-img">
+    </div>
+    <form id="uploadForm"
+      action="https://script.google.com/macros/s/AKfycbxsF5mAaRoCBU_dgpA4kCA-nxnlE29nHIdWTgVbU7_jQO9XYZqPWUVzY-1oRNwxwfVq5A/exec"
+      method="POST">
+      <input type="hidden" value="" name="fileContent" id="fileContent">
+      <input type="hidden" value="" name="filename" id="filename">
+      
+      <!-- Input Email -->
+      <div class="input-box">
+        <label for="email" class="form-label">Email <span style="color: red;">*</span></label>
+        <input type="text" id="email" name="email" class="form-control" placeholder="Masukan email anda" required>
+      </div>
+
+      <!-- Input Nama -->
+      <div class="input-box">
+        <label for="nama" class="form-label">Nama Lengkap <span style="color: red;">*</span> </label>
+        <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukan nama lengkap anda" required>
+      </div>
+
+      <!-- Input Usia -->
+      <div class="input-box">
+        <label for="usia" class="form-label">Usia <span style="color: red;">*</span></label>
+        <input type="text" id="usia" name="usia" class="form-control"
+          placeholder="Masukan usia kamu" required>
+      </div>
+
+      <!-- Input Kontak -->
+      <div class="input-box">
+        <label for="kontak" class="form-label">Kontak <span style="color: red;">*</span></label>
+        <input type="text" id="kontak" name="kontak" class="form-control" placeholder="Masukan nomor telepon kamu" required>
+      </div>
+
+      <!-- Input Domisili -->
+      <div class="input-box">
+        <label for="domisili" class="form-label">Domisili <span style="color: red;">*</span></label>
+        <input type="text" id="domisili" name="domisili" class="form-control" placeholder="Masukan alamat domisili kamu" required>
+      </div>
+
+      <!-- Input Instansi -->
+      <div class="input-box">
+        <label for="instansi" class="form-label">Instansi / Universitas <span style="color: red;">*</span></label>
+        <input type="text" id="instansi" name="instansi" class="form-control" placeholder="Masukan instansi kamu"
+          required>
+      </div>
+
+      <!-- Input Divisi -->
+      <div class="input-box">
+        <label for="divisi" class="form-label">Divisi Yang Ingin Kamu Pilih <span style="color: red;">*</span></label>
+        <select id="divisi" name="divisi" class="form-control" required>
+          <option value="" disabled selected>Pilih Divisi</option>
+          <option value="Graphic Design">Graphic Design</option>
+          <option value="Kesekretariatan">Kesekretariatan</option>
+          <option value="Finance">Finance</option>
+          <option value="Human Resource Development">Human Resource Development</option>
+          <option value="Public Relation">Public Relation</option>
+          <option value="Social Media Marketing">Social Media Marketing</option>
+          <option value="Content Creator">Content Creator</option>
+        </select>
+      </div>
+
+      <!-- Input Alasan 1 -->
+      <div class="input-box">
+        <label for="alasan_divisi" class="form-label">Alasan Memilih Divisi Tersebut <span
+            style="color: red;">*</span></label>
+        <textarea id="alasan_divisi" name="alasan_divisi" class="form-control"
+          placeholder="Jelaskan alasan Anda memilih divisi ini" required></textarea>
+      </div>
+
+      <!-- Input Alasan 2 -->
+      <div class="input-box">
+        <label for="alasan_direkrut" class="form-label">Berikan kami alasan mengapa kami harus merekrut kamu di kepengurusan YRI SulSel <span
+            style="color: red;">*</span></label>
+        <textarea id="alasan_direkrut" name="alasan_direkrut" class="form-control"
+          placeholder="Jelaskan alasan kamu disini" required></textarea>
+      </div>
+
+      <!-- Input Alasan 3 -->
+      <div class="input-box">
+        <label for="alasan_bergabung" class="form-label">Alasan bergabung dalam kepengurusan YRI SulSel <span style="color: red;">*</span></label>
+        <textarea id="alasan_bergabung" name="alasan_bergabung" class="form-control"
+          placeholder="Jelaskan alasan kamu disini" required></textarea>
+      </div>
+
+      <!-- Input Pengalaman Organisasi -->
+      <div class="input-box">
+        <label for="organisasi" class="form-label">Apa saja Organisasi yang pernah dan sedang kamu ikuti saat ini? <span
+            style="color: red;">*</span></label>
+        <textarea id="organisasi" name="organisasi" class="form-control" placeholder="Masukkan pengalaman organisasi kamu disini"
+          required></textarea>
+      </div>
+
+      <!-- Link Portfolio -->
+      <div class="input-box">
+        <label for="link_portfolio" class="form-label">Link Portfolio (Khusus Graphic desaign & Social Media Marketing) Jika ada</label>
+        <textarea id="link_portfolio" name="link_portfolio" class="form-control"
+          placeholder="Masukkan link portfolio kamu disini"></textarea>
+      </div>
+
+      <!-- Input File -->
+      <div class="input-box">
+        <label for="file" class="form-label">File <span style="color: red;">*</span></label>
+        <input required id="attach" name="attach" type="file" class="form-control">
+        <small>Dijadikan dalam 1 bentuk pdf (CV, Tanda Pengenal *Diutamakan KTP, Screenshoot follow IG youthranger.id & yri.sulsel) </small>
+      </div>
+
+      <div id="progressContainer" class="mb-3" style="display: none;">
+        <label for="progressBar" class="form-label">Sedang Mengunggah...</label>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar progress-bar-striped" role="progressbar" style="width: 0%;"
+            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <!-- Tombol Kirim -->
+      <div class="button">
+        <input type="button" value="Submit Pendaftaran" onclick="UploadFile(event);" class="btn btn-primary w-100">
+      </div>
+    </form>
+
+    <!-- Modal Terima Kasih -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="thankYouModalLabel">Kamu berhasil mendaftar 👏</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p id="thankYouMessage">
+              Terima kasih <strong>Nama Pendaftar</strong>, Kamu telah mendaftar untuk divisi <strong>Nama Divisi</strong>.
+              Mohon untuk menunggu informasi selanjutnya yang akan dikirimkan melalui email yang sudah di daftarkan!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+      <!-- Bagian Footer-->
+      <footer class="footer">
+        <div class="footer-container">
+          <p>&copy; 2024 YRI Sulawesi Selatan. All rights reserved. 
+          <a href="https://instagram.com" target="_blank">Instagram</a>,
+          <a href="https://facebook.com" target="_blank">Facebook</a>, and
+          <a href="https://twitter.com" target="_blank">Twitter</a>.</p>
+        </div>
+      </footer>
+  <script>
+     function UploadFile(event) {
+        event.preventDefault(); // Prevent default form submission
+        var reader = new FileReader();
+        var file = document.getElementById("attach").files[0];
+        var nama = document.getElementById("nama").value; // Ambil nama dari input
+        var divisi = document.getElementById("divisi").value; // Ambil divisi dari select
+
+        reader.onload = function () {
+          document.getElementById("fileContent").value = reader.result;
+          document.getElementById("filename").value = file.name;
+
+          // Show progress bar
+          document.getElementById("progressContainer").style.display = "block";
+          var progressBar = document.getElementById("progressBar");
+          var width = 0;
+
+          // Simulate progress bar animation
+          var progressInterval = setInterval(function () {
+            if (width >= 100) {
+              clearInterval(progressInterval); // Stop when 100% is reached
+              submitForm(nama, divisi); // Call submit form function
+            } else {
+              width++;
+              progressBar.style.width = width + '%';
+              progressBar.setAttribute('aria-valuenow', width);
+            }
+          }, 50); // Update every 50ms
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function submitForm(nama, divisi) {
+        var form = document.getElementById("uploadForm");
+        var formData = new FormData(form);
+
+        fetch('https://script.google.com/macros/s/AKfycbxsF5mAaRoCBU_dgpA4kCA-nxnlE29nHIdWTgVbU7_jQO9XYZqPWUVzY-1oRNwxwfVq5A/exec', {
+          method: 'POST',
+          body: formData,
+        })
+          .then(response => response.text())
+          .then(() => {
+            // Hide progress bar and reset form
+            document.getElementById("progressContainer").style.display = "none";
+            document.getElementById("uploadForm").reset();
+
+            // Set the thank you message
+            var thankYouMessage = document.getElementById("thankYouMessage");
+            thankYouMessage.innerHTML = `Terima kasih ${nama}, Kamu telah mendaftar untuk divisi ${divisi}. Mohon untuk menunggu informasi selanjutnya yang akan dikirimkan melalui email yang sudah di daftarkan!`;
+
+            // Show the modal
+            var myModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+            myModal.show();
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+      }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
