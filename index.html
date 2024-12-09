@@ -145,6 +145,13 @@
       <div class="button">
         <input type="button" value="Submit Pendaftaran" onclick="UploadFile(event);" class="btn btn-primary w-100">
       </div>
+
+      <!-- Tombol untuk Menampilkan Modal Informasi Kegiatan Pendaftaran -->
+      <div class="button">
+        <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#infoPendaftaranModal">
+          Lihat Informasi Pendaftaran
+        </button>
+      </div>
     </form>
 
     <!-- Modal Terima Kasih -->
@@ -159,6 +166,39 @@
             <p id="thankYouMessage">
               Terima kasih <strong>Nama Pendaftar</strong>, Kamu telah mendaftar untuk divisi <strong>Nama Divisi</strong>.
               Mohon untuk menunggu informasi selanjutnya yang akan dikirimkan melalui email yang sudah di daftarkan!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Informasi Kegiatan Pendaftaran -->
+    <div class="modal fade" id="infoPendaftaranModal" tabindex="-1" aria-labelledby="infoPendaftaranModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoPendaftaranModalLabel">Informasi Pendaftaran 📢</h5>
+          </div>
+          <div class="modal-body">
+            <p><strong>Syarat Pendaftaran:</strong> <br>
+            1. Berusia 18-24 tahun <br>
+            2. Memiliki ketertarikan pada divisi yang tersedia <br>
+            3. Mampu mengatur waktu dengan baik <br>
+            4. Berdomisili di Sulawesi Selatan <br>
+            5. Melampirkan CV <br>
+            6. Mampu berkerja dalam tim <br>
+            7. Ingin belajar</p>
+            <p><strong>Timeline:</strong> <br>
+            14-21 Juli 2024 : Pendaftaran <br>
+            24 Juli 2024 : Pengumuman Berkas <br>
+            25 Juli 2024 : Pengumuman Jadwal Interview <br>
+            26-27 Juli 2024 : Interview <br>
+            29 Juli 2024 : Pengumuman Akhir <br>
+            4 Agustus 2024 : Onboarding
             </p>
           </div>
           <div class="modal-footer">

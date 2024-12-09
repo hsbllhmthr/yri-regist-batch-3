@@ -299,6 +299,7 @@ label {
     background-color: #000;
     color: #fff;
     border: none;
+    width: 500px;
 }
 
 .modal-footer .btn-secondary:hover {
@@ -447,3 +448,40 @@ label {
     transform: translateY(0);
     /* Kembali ke posisi awal */
 }
+
+        /* Tombol untuk modal informasi kegiatan pendaftaran */
+        .button button {
+            background-color: #00c95a;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 16px;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            /* Sesuaikan dengan tombol sebelumnya */
+        }
+    
+        /* Hover efek */
+        .button button:hover {
+            background-color: #00ad4e;
+            color: #fff;
+            /* Pastikan warna teks tetap putih saat hover */
+        }
+    
+        /* Fokus efek */
+        .button button:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+    
+        /* Klik efek */
+        .button button:active {
+            transform: scale(0.98);
+            background-color: #004085;
+        }
+        
