@@ -42,7 +42,7 @@
       <!-- Input Nama -->
       <div class="input-box">
         <label for="nama" class="form-label">Nama Lengkap <span style="color: red;">*</span> </label>
-        <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukan nama lengkap anda" required>
+        <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukan nama lengkap kamu" required>
       </div>
 
       <!-- Input Usia -->
@@ -50,9 +50,8 @@
         <label for="usia" class="form-label">Usia <span style="color: red;">*</span></label>
         <input type="number" id="usia" name="usia" class="form-control" placeholder="Masukkan usia Anda" required
           oninput="validateUsia(this)">
-        <small id="usiaError" class="error-message">Usia harus antara 17 hingga 24 tahun.</small>
+        <small id="usiaError" class="error-message">Masukkan usia kamu (contoh: 23)</small>
       </div>
-
 
       <!-- Input Kontak -->
       <div class="input-box">
@@ -154,8 +153,8 @@
       </div>
 
       <!-- Tombol Download File -->
-      <a href="/file/booklet.pdf" class="btn btn-primary w-100" download
-        style="background-color: #0056b3; color: white; border: none; border-radius: 10px; padding: 12px; font-size: 16px; font-weight: 600; text-align: center; margin-top: 10px; transition: background-color 0.3s ease;">
+      <a href="/file/booklet.pdf" class="btn btn-primary w-100 btn-download" download
+        style="background-color: #0056b3; color: white; border: none; border-radius: 10px; padding: 12px; font-size: 16px; font-weight: 600; text-align: center; transition: background-color 0.3s ease;">
         Download Booklet YRI Sulsel Batch 3
       </a>
     </form>
