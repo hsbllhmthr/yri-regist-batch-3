@@ -50,7 +50,7 @@
         <label for="usia" class="form-label">Usia <span style="color: red;">*</span></label>
         <input type="number" id="usia" name="usia" class="form-control" placeholder="Masukkan usia Anda" required
           oninput="validateUsia(this)">
-        <small id="usiaError" class="error-message">Usia harus antara 18 hingga 23 tahun.</small>
+        <small id="usiaError" class="error-message">Usia harus antara 17 hingga 24 tahun.</small>
       </div>
 
 
@@ -184,21 +184,24 @@
           </div>
           <div class="modal-body">
             <p><strong>Syarat Pendaftaran:</strong> <br>
-            1. Berusia 18-24 tahun <br>
-            2. Memiliki ketertarikan pada divisi yang tersedia <br>
-            3. Mampu mengatur waktu dengan baik <br>
-            4. Berdomisili di Sulawesi Selatan <br>
-            5. Melampirkan CV <br>
-            6. Mampu berkerja dalam tim <br>
-            7. Ingin belajar</p>
-            <p><strong>Timeline:</strong> <br>
-            14-21 Juli 2024 : Pendaftaran <br>
-            24 Juli 2024 : Pengumuman Berkas <br>
-            25 Juli 2024 : Pengumuman Jadwal Interview <br>
-            26-27 Juli 2024 : Interview <br>
-            29 Juli 2024 : Pengumuman Akhir <br>
-            4 Agustus 2024 : Onboarding
+            1. Terbuka Untuk Umum 17-24 tahun <br>
+            2. Bergabung sebagai rangers YRI Sulawesi Selatan <br>
+            3. Berdomisili di Sulawesi Selatan <br>
+            4. Mengikuti seluruh rangkaian open recruitment <br>
+            5. Memiliki kemampuan berkomunikasi dan teamwork yang baik <br>
+            6. Memiliki semangat belajar dan bekerja yang tinggi<br>
+            7. Telah membaca dan memahami dengan baik buku panduan dan melengkapi berkas persyaratan yang dibutuhkan <br>
+            8. Dapat berkomitmen selama 6 bulan menjalankan kepengurusan di Youth Ranger Sulsel Batch 3 <br>
+            9. Mengikuti akun instagram @yri.sulsel dan @youthranger.id
             </p>
+            <p><strong>Timeline:</strong> <br>
+            9-15 Desember : Pendaftaran <br>
+            16-17 Desember : Leaderless Group Discussion (LGD) <br>
+            18-19 Desember : Wawancara <br>
+            23 Desember : Pengumuman <br>
+            </p>
+            <br>
+            <p>*Pendaftaran akan ditutup pada tanggal 15 Desember Pukul 23.00 WITA</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -298,7 +301,7 @@
             var usiaField = document.getElementById("usia");
 
             // Validasi usia antara 18 dan 23 tahun
-            if (usia >= 18 && usia <= 23) {
+            if (usia >= 17 && usia <= 24) {
               usiaField.classList.remove("is-invalid");
               usiaField.classList.add("is-valid");
               usiaError.classList.remove("visible");
