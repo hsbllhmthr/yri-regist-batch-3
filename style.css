@@ -188,7 +188,7 @@ label {
         /* Ukuran font lebih kecil untuk layar kecil */
     }
     .thumbnail-img {
-              width: 350px;
+              width: 330px;
               /* Ukuran gambar lebih kecil pada perangkat mobile */
               height: auto;
           }
@@ -303,4 +303,147 @@ label {
 
 .modal-footer .btn-secondary:hover {
     background-color: #444;
+}
+
+/* Gaya umum untuk kotak input */
+.input-box {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Label untuk input */
+.input-box .form-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Inputan email */
+.input-box .form-control {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Animasi smooth */
+    outline: none;
+    /* Hilangkan border outline default */
+}
+
+/* Warna border saat input mendapatkan fokus */
+.input-box .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Input valid */
+.input-box .form-control.is-valid {
+    border-color: #28a745;
+    background-color: #e6ffe6;
+    /* Hijau pucat */
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.25);
+}
+
+/* Input invalid */
+.input-box .form-control.is-invalid {
+    border-color: #dc3545;
+    background-color: #ffe6e6;
+    /* Merah pucat */
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.25);
+}
+
+/* Pesan error */
+.input-box .error-message {
+    color: #dc3545;
+    /* Merah */
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: none;
+    /* Awalnya tersembunyi */
+    opacity: 0;
+    transform: translateY(-10px);
+    /* Posisi sedikit di atas */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transisi smooth untuk opacity dan transform */
+}
+
+/* Pesan error saat muncul */
+.input-box .error-message.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    /* Kembali ke posisi awal */
+}
+
+/* Gaya umum untuk input usia */
+.input-box {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Label untuk input */
+.input-box .form-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Inputan usia */
+.input-box .form-control {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Animasi smooth */
+    outline: none;
+}
+
+/* Warna border saat input mendapatkan fokus */
+.input-box .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Input valid */
+.input-box .form-control.is-valid {
+    border-color: #28a745;
+    background-color: #e6ffe6;
+    /* Hijau pucat */
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.25);
+}
+
+/* Input invalid */
+.input-box .form-control.is-invalid {
+    border-color: #dc3545;
+    background-color: #ffe6e6;
+    /* Merah pucat */
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.25);
+}
+
+/* Pesan error */
+.input-box .error-message {
+    color: #dc3545;
+    /* Merah */
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: none;
+    /* Awalnya tersembunyi */
+    opacity: 0;
+    transform: translateY(-10px);
+    /* Posisi sedikit di atas */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Transisi smooth untuk opacity dan transform */
+}
+
+/* Pesan error saat muncul */
+.input-box .error-message.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    /* Kembali ke posisi awal */
 }

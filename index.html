@@ -33,8 +33,11 @@
       <!-- Input Email -->
       <div class="input-box">
         <label for="email" class="form-label">Email <span style="color: red;">*</span></label>
-        <input type="text" id="email" name="email" class="form-control" placeholder="Masukan email anda" required>
+        <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan email Anda" required
+          oninput="validateEmailRealTime(this)" />
+        <small id="emailError" class="error-message">Masukkan email yang valid!</small>
       </div>
+
 
       <!-- Input Nama -->
       <div class="input-box">
@@ -45,9 +48,11 @@
       <!-- Input Usia -->
       <div class="input-box">
         <label for="usia" class="form-label">Usia <span style="color: red;">*</span></label>
-        <input type="text" id="usia" name="usia" class="form-control"
-          placeholder="Masukan usia kamu" required>
+        <input type="number" id="usia" name="usia" class="form-control" placeholder="Masukkan usia Anda" required
+          oninput="validateUsia(this)">
+        <small id="usiaError" class="error-message">Usia harus antara 18 hingga 23 tahun.</small>
       </div>
+
 
       <!-- Input Kontak -->
       <div class="input-box">
@@ -125,7 +130,7 @@
       <div class="input-box">
         <label for="file" class="form-label">File <span style="color: red;">*</span></label>
         <input required id="attach" name="attach" type="file" class="form-control">
-        <small>Dijadikan dalam 1 bentuk pdf (CV, Tanda Pengenal *Diutamakan KTP, Screenshoot follow IG youthranger.id & yri.sulsel) </small>
+        <small>Dijadikan dalam 1 bentuk file pdf (CV, Tanda Pengenal *Diutamakan KTP, Screenshoot follow IG youthranger.id & yri.sulsel) </small>
       </div>
 
       <div id="progressContainer" class="mb-3" style="display: none;">
@@ -222,7 +227,7 @@
 
             // Set the thank you message
             var thankYouMessage = document.getElementById("thankYouMessage");
-            thankYouMessage.innerHTML = `Terima kasih ${nama}, Kamu telah mendaftar untuk divisi ${divisi}. Mohon untuk menunggu informasi selanjutnya yang akan dikirimkan melalui email yang sudah di daftarkan!`;
+            thankYouMessage.innerHTML = `Terima kasih <strong>${nama}</strong>, Kamu telah mendaftar untuk divisi <strong>${divisi}</strong>. Mohon untuk menunggu informasi selanjutnya yang akan dikirimkan melalui email yang sudah di daftarkan!`;
 
             // Show the modal
             var myModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
@@ -232,6 +237,40 @@
             console.error('Error:', error);
           });
       }
+
+      function validateEmailRealTime(input) {
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex untuk format email
+          const emailError = document.getElementById("emailError");
+
+          if (!emailPattern.test(input.value)) {
+            emailError.classList.add("visible"); // Tampilkan pesan error dengan animasi
+            input.classList.add("is-invalid"); // Tambahkan gaya border merah
+            input.classList.remove("is-valid"); // Hapus gaya valid
+          } else {
+            emailError.classList.remove("visible"); // Sembunyikan pesan error
+            input.classList.remove("is-invalid"); // Hapus gaya invalid
+            input.classList.add("is-valid"); // Tambahkan gaya valid
+          }
+        }
+
+        function validateUsia(input) {
+            var usia = input.value;
+            var usiaError = document.getElementById("usiaError");
+            var usiaField = document.getElementById("usia");
+
+            // Validasi usia antara 18 dan 23 tahun
+            if (usia >= 18 && usia <= 23) {
+              usiaField.classList.remove("is-invalid");
+              usiaField.classList.add("is-valid");
+              usiaError.classList.remove("visible");
+            } else {
+              usiaField.classList.remove("is-valid");
+              usiaField.classList.add("is-invalid");
+              usiaError.classList.add("visible");
+            }
+          }
+
+
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
