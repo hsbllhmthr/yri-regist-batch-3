@@ -343,6 +343,16 @@
                   formClosedModal.show();
                 });
 
+
+           // Disable any attempt to close the modal or interact with the background
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.addEventListener('keydown', (e) => {
+              if (e.key === 'Escape') {
+                e.preventDefault(); // Block escape key
+              }
+            });
+
+            
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
