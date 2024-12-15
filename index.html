@@ -33,7 +33,7 @@
       <!-- Input Email -->
       <div class="input-box">
         <label for="email" class="form-label">Email <span style="color: red;">*</span></label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan email kamu" required
+        <input type="email" id="email" name="email" class="form-control" placeholder="Masukkan email kamu" disabled
           oninput="validateEmailRealTime(this)" />
         <small id="emailError" class="error-message">Masukkan email yang valid!</small>
       </div>
@@ -41,13 +41,13 @@
       <!-- Input Nama -->
       <div class="input-box">
         <label for="nama" class="form-label">Nama Lengkap <span style="color: red;">*</span> </label>
-        <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukan nama lengkap kamu" required>
+        <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukan nama lengkap kamu" disabled>
       </div>
 
       <!-- Input Usia -->
       <div class="input-box">
         <label for="usia" class="form-label">Usia <span style="color: red;">*</span></label>
-        <input type="number" id="usia" name="usia" class="form-control" placeholder="Masukkan usia kamu (contoh: 23)" required
+        <input type="number" id="usia" name="usia" class="form-control" placeholder="Masukkan usia kamu (contoh: 23)" disabled
           oninput="validateUsia(this)">
         <small id="usiaError" class="error-message">Kamu harus berusia 17-24 tahun</small>
       </div>
@@ -55,26 +55,26 @@
       <!-- Input Kontak -->
       <div class="input-box">
         <label for="kontak" class="form-label">Kontak <span style="color: red;">*</span></label>
-        <input type="text" id="kontak" name="kontak" class="form-control" placeholder="Masukan nomor telepon kamu" required>
+        <input type="text" id="kontak" name="kontak" class="form-control" placeholder="Masukan nomor telepon kamu" disabled>
       </div>
 
       <!-- Input Domisili -->
       <div class="input-box">
         <label for="domisili" class="form-label">Domisili <span style="color: red;">*</span></label>
-        <input type="text" id="domisili" name="domisili" class="form-control" placeholder="Masukan alamat domisili kamu" required>
+        <input type="text" id="domisili" name="domisili" class="form-control" placeholder="Masukan alamat domisili kamu" disabled>
       </div>
 
       <!-- Input Instansi -->
       <div class="input-box">
         <label for="instansi" class="form-label">Instansi / Universitas <span style="color: red;">*</span></label>
         <input type="text" id="instansi" name="instansi" class="form-control" placeholder="Masukan instansi kamu"
-          required>
+          disabled>
       </div>
 
       <!-- Input Divisi -->
       <div class="input-box">
         <label for="divisi" class="form-label">Divisi Yang Ingin Kamu Pilih <span style="color: red;">*</span></label>
-        <select id="divisi" name="divisi" class="form-control" required>
+        <select id="divisi" name="divisi" class="form-control" disabled>
           <option value="" disabled selected>Pilih Divisi</option>
           <option value="Graphic Design">Graphic Design</option>
           <option value="Project Management">Project Management</option>
@@ -86,13 +86,12 @@
           <option value="Content Creator">Content Creator</option>
         </select>
       </div>
-
       <!-- Input Alasan 1 -->
       <div class="input-box">
         <label for="alasan_divisi" class="form-label">Alasan Memilih Divisi Tersebut <span
             style="color: red;">*</span></label>
         <textarea id="alasan_divisi" name="alasan_divisi" class="form-control"
-          placeholder="Jelaskan alasan kamu memilih divisi ini" required></textarea>
+          placeholder="Jelaskan alasan kamu memilih divisi ini" disabled></textarea>
       </div>
 
       <!-- Input Alasan 2 -->
@@ -100,14 +99,14 @@
         <label for="alasan_direkrut" class="form-label">Berikan kami alasan mengapa kami harus merekrut kamu di kepengurusan YRI SulSel <span
             style="color: red;">*</span></label>
         <textarea id="alasan_direkrut" name="alasan_direkrut" class="form-control"
-          placeholder="Jelaskan alasan kamu disini" required></textarea>
+          placeholder="Jelaskan alasan kamu disini" disabled></textarea>
       </div>
 
       <!-- Input Alasan 3 -->
       <div class="input-box">
         <label for="alasan_bergabung" class="form-label">Alasan bergabung dalam kepengurusan YRI SulSel <span style="color: red;">*</span></label>
         <textarea id="alasan_bergabung" name="alasan_bergabung" class="form-control"
-          placeholder="Jelaskan alasan kamu disini" required></textarea>
+          placeholder="Jelaskan alasan kamu disini" disabled></textarea>
       </div>
 
       <!-- Input Pengalaman Organisasi -->
@@ -115,20 +114,20 @@
         <label for="organisasi" class="form-label">Apa saja Organisasi yang pernah dan sedang kamu ikuti saat ini? <span
             style="color: red;">*</span></label>
         <textarea id="organisasi" name="organisasi" class="form-control" placeholder="Masukkan pengalaman organisasi kamu disini"
-          required></textarea>
+          disabled></textarea>
       </div>
 
       <!-- Link Portfolio -->
       <div class="input-box">
         <label for="link_portfolio" class="form-label">Link Portfolio (Khusus Graphic desaign & Social Media Marketing) Jika ada</label>
         <textarea id="link_portfolio" name="link_portfolio" class="form-control"
-          placeholder="Masukkan link portfolio kamu disini"></textarea>
+          placeholder="Masukkan link portfolio kamu disini" disabled></textarea>
       </div>
 
       <!-- Input File -->
       <div class="input-box">
         <label for="file" class="form-label">File <span style="color: red;">*</span></label>
-        <input required id="attach" name="attach" type="file" class="form-control">
+        <input required id="attach" name="attach" type="file" class="form-control" disabled>
         <small>Dijadikan dalam 1 bentuk file pdf (CV, Tanda Pengenal *Diutamakan KTP, Screenshoot follow IG youthranger.id & yri.sulsel) </small>
       </div>
 
@@ -142,7 +141,7 @@
 
       <!-- Tombol Kirim -->
       <div class="button">
-        <input type="button" value="Submit Pendaftaran" onclick="UploadFile(event);" class="btn btn-primary w-100">
+        <input type="button" value="Submit Pendaftaran" onclick="UploadFile(event);" class="btn btn-primary w-100" disabled>
       </div>
 
       <!-- Tombol untuk Menampilkan Modal Informasi Kegiatan Pendaftaran -->
