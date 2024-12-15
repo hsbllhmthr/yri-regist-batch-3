@@ -24,6 +24,24 @@
     <div class="thumbnail-container">
       <img src="/thumb-form2.jpg" alt="Thumbnail" class="thumbnail-img">
     </div>
+    <div class="countdown-wrapper">
+      <div class="countdown-box">
+        <span id="days" class="time-number">00</span>
+        <span class="time-label">Hari</span>
+      </div>
+      <div class="countdown-box">
+        <span id="hours" class="time-number">00</span>
+        <span class="time-label">Jam</span>
+      </div>
+      <div class="countdown-box">
+        <span id="minutes" class="time-number">00</span>
+        <span class="time-label">Menit</span>
+      </div>
+      <div class="countdown-box">
+        <span id="seconds" class="time-number">00</span>
+        <span class="time-label">Detik</span>
+      </div>
+    </div>
     <form id="uploadForm"
       action="https://script.google.com/macros/s/AKfycbxsF5mAaRoCBU_dgpA4kCA-nxnlE29nHIdWTgVbU7_jQO9XYZqPWUVzY-1oRNwxwfVq5A/exec"
       method="POST">
@@ -316,6 +334,29 @@
               usiaError.classList.add("visible");
             }
           }
+
+        const closingDate = new Date('2024-12-15 23:59:59').getTime();
+
+          const countdownInterval = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = closingDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+
+            if (timeLeft < 0) {
+              clearInterval(countdownInterval);
+              document.getElementById('countdown').classList.add('hidden');
+              document.getElementById('closed-message').classList.remove('hidden');
+            }
+          }, 1000);
 
 
   </script>
